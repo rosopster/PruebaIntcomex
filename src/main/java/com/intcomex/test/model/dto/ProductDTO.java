@@ -16,5 +16,5 @@ public class ProductDTO {
     private String productName;
     private BigDecimal price;
     private String categoryName;
-    private String categoryPicture;
+    byte[]  categoryPicture;
 }

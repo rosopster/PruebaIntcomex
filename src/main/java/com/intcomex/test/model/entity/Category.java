@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Table(name="categories")
 @AllArgsConstructor
 @NoArgsConstructor
-@Data // Lombok annotation to generate getters, setters, toString, etc.
+@Data 
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +28,7 @@ public class Category {
     private String description;
     
     @Lob
-    private String picture;
+    byte[] picture;
+
 }
 

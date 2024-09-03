@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,5 +22,5 @@ public class CategoryDTO {
     @Size(max = 255, message = "Description must not exceed 255 characters")
     private String description;
 
-    private String picture;  
+    byte[] picture;
 }

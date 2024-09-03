@@ -1,8 +1,6 @@
 package com.intcomex.test.controller.rest;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -47,11 +45,9 @@ public class ProductController {
     }
 
     @GetMapping("/products/{id}")
-    public ResponseEntity<Resource> getProductById(@PathVariable Long id) throws IOException {
+    public ResponseEntity<ProductDTO> getProductById(@PathVariable Long id) throws IOException {
         ProductDTO product = iProductService.getProductById(id);
-        Resource file = iCategoryService.loadAsResource(product.getCategoryPicture());
-        String contentType = Files.probeContentType(file.getFile().toPath());
-        return ResponseEntity.ok().header(org.springframework.http.HttpHeaders.CONTENT_TYPE, contentType).body(file);
+        return new ResponseEntity<>(product, HttpStatus.OK);
     }
 }
 

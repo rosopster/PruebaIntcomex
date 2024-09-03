@@ -13,8 +13,8 @@ public interface ProductDtoMapper {
     @Mapping(source = "productName", target = "productName")
     @Mapping(source = "unitPrice", target = "price")
     @Mapping(source = "category.categoryName", target = "categoryName")
-    @Mapping(source = "category.picture", target = "categoryPicture")
     @Mapping(source = "category.categoryId", target = "categoryId")
+    @Mapping(source = "category.picture", target = "categoryPicture")
     @Mapping(source = "supplier.supplierId", target = "supplierId")
     ProductDTO productToDto(Product product);
 

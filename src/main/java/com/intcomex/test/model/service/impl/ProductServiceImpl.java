@@ -1,9 +1,6 @@
 package com.intcomex.test.model.service.impl;
 
-import java.net.MalformedURLException;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
-import java.nio.file.Path;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
